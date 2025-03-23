@@ -61,6 +61,7 @@ const VisitorDashboard = () => {
   };
 
   // Load data on mount and when selected date changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Use GitHub data source for initial load and when date changes
     loadData(true);

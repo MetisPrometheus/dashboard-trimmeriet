@@ -52,7 +52,7 @@ const PredictionExplanation = () => {
         <div className={styles.content}>
           <p>
             Our prediction system works by analyzing historical visitor patterns
-            at your gym. Here's how it works:
+            at your gym. Here&apos;s how it works:
           </p>
 
           <ol className={styles.list}>
@@ -63,8 +63,8 @@ const PredictionExplanation = () => {
             </li>
             <li className={styles.listItem}>
               <span className={styles.strong}>Real-time Adjustments:</span>{" "}
-              Today's actual visitor numbers are used to adjust predictions for
-              the rest of the day.
+              Today&apos;s actual visitor numbers are used to adjust predictions
+              for the rest of the day.
             </li>
             <li className={styles.listItem}>
               <span className={styles.strong}>Pattern Recognition:</span> Our
