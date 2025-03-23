@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Trimmeriet Gym Visitor Dashboard
+
+A Next.js application for tracking and visualizing gym visitor data with real-time updates and predictions.
+
+## Features
+
+- **Real-time Visitor Tracking**: Monitor current visitor count at your gym
+- **Historical Data**: View visitor patterns from previous days
+- **Predictive Analytics**: See forecasts for expected visitor counts throughout the day
+- **Automatic Updates**: Data refreshes automatically from GitHub repository
+- **Interactive Charts**: Visualize visitor patterns with clear, interactive charts
+- **Mobile Responsive**: Works on all device sizes
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17.0 or later
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/datacollector-trimmeriet.git
+cd datacollector-trimmeriet
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Data Source
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application fetches data from the GitHub repository:
+https://github.com/MetisPrometheus/datacollector-trimmeriet/blob/main/data/visitor_counts.csv
 
-## Learn More
+Data is automatically refreshed when:
 
-To learn more about Next.js, take a look at the following resources:
+- The page loads
+- The date is changed
+- The "Refresh Now" button is clicked
+- Every 5 minutes while viewing today's data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+datacollector-trimmeriet/
+├── public/
+│   └── data/                # Local data cache
+├── src/
+│   ├── app/                 # Next.js app router
+│   │   ├── api/             # API routes
+│   │   ├── page.js          # Main page
+│   │   └── layout.js        # Root layout
+│   ├── components/          # React components
+│   │   ├── DateSelector.js
+│   │   ├── PredictionExplanation.js
+│   │   ├── SummaryStats.js
+│   │   ├── VisitorChart.js
+│   │   └── VisitorDashboard.js
+│   └── utils/               # Utility functions
+│       └── dataUtils.js     # Data fetching & processing
+└── package.json
+```
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js 14
+- React 18
+- Recharts (for data visualization)
+- CSS Modules (for styling)
+- date-fns (for date manipulation)
+- PapaParse (for CSV parsing)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
