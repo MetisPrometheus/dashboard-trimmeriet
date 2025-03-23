@@ -1,0 +1,104 @@
+/* src/components/DateSelector.module.css */
+.container {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navButton {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  transition: background-color 0.2s;
+}
+
+.navButton:hover {
+  background-color: #f3f4f6;
+}
+
+.navButtonDisabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.dateDisplay {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.quickButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quickButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.quickButtonActive {
+  background-color: #2563eb;
+  color: white;
+}
+
+.quickButtonInactive {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.quickButtonInactive:hover {
+  background-color: #e5e7eb;
+}
+
+.dateInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+@media (min-width: 640px) {
+  .dateInput {
+    width: auto;
+  }
+}

@@ -1,0 +1,84 @@
+/* src/components/SummaryStats.module.css */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.statCard {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.statContent {
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer {
+  padding: 0.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBlue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.iconGreen {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.iconPurple {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.iconYellow {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.statIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.statInfo {
+  margin-left: 1rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.statSubtext {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
